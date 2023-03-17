@@ -174,6 +174,162 @@
             <button onclick="RecTankSurface()">Submit</button>
         </div>
 
+
+
+         <!-- Capsule Surface Area -->
+
+         <h1>Capsule Surface Area</h1>
+         <div class="surface-area">
+             <Label>Base Radius</Label> <input type="text" id="capsule_radius">  
+             <select name="" id="capsule-measure1">
+                 <option value="feet">Feet</option>
+                 <option value="mile">Mile</option>
+                 <option value="yard">Yard</option>
+                 <option value="inches">Inches</option>
+                 <option value="kilometer">Kilometer</option>
+             </select> 
+             <br>
+ 
+             <Label>Height</Label> <input type="text" id="capsule_height">  
+             <select name="" id="capsule-measure2">
+                 <option value="feet">Feet</option>
+                 <option value="mile">Mile</option>
+                 <option value="yard">Yard</option>
+                 <option value="inches">Inches</option>
+                 <option value="kilometer">Kilometer</option>
+             </select> 
+ 
+             <div class="answer" style="display: flex; align-items: center;">
+                 <p class="CapsuleTopSA"></p>
+                 <p class="CapsuleTopParam"><sup></sup></p>
+             </div>
+ 
+             <div class="answer" style="display: flex; align-items: center;">
+                 <p class="CapsuleBottomSA"></p>
+                 <p class="CapsuleBottom-param"><sup></sup></p>
+             </div>
+ 
+             <div class="answer" style="display: flex; align-items: center;">
+                 <p class="CapsuleLateralSA"></p>
+                 <p class="Capsule_Lateral_param"><sup></sup></p>
+             </div>
+ 
+             <div class="answer" style="display: flex; align-items: center;">
+                 <p class="CapsuleTotalSA"></p>
+                 <p class="CapsuleTotal-param"><sup></sup></p>
+             </div>
+ 
+             <button onclick="CapsuleSurfaceArea()">Submit</button>
+         </div>
+
+
+        <!-- Cap Surface Area -->
+
+        <h1>Cap Surface Area</h1>
+        <div class="surface-area">
+            <Label>Length</Label> <input type="text" id="cap_radius">  
+            <select name="" id="cap_measure1">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <br>
+
+            <Label>Ball Radius</Label> <input type="text" id="capBall_radius">  
+            <select name="" id="cap_measure2">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <br>
+
+            <Label>Height</Label> <input type="text" id="cap_height">  
+            <select name="" id="cap_measure3">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="TankSA"></p>
+                <p class="Tank-param"><sup></sup></p>
+            </div>
+
+
+            <button onclick="RecTankSurface()">Submit</button>
+        </div>
+
+
+        
+        <!-- Conical Frustum Surface Area -->
+
+        <h1>Conical Frustum Surface Area</h1>
+        <div class="surface-area">
+            <Label>Top Radius</Label> <input type="text" id="conicalTop_radius">  
+            <select name="" id="conical_measure1">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <br>
+
+            <Label>Bottom Radius</Label> <input type="text" id="conicalBottom_radius">  
+            <select name="" id="conical_measure2">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <br>
+
+            <Label>Height</Label> <input type="text" id="conical_height">  
+            <select name="" id="cap_measure3">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="ConicalTopSA"></p>
+                <p class="ConicalTopParam"><sup></sup></p>
+            </div>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="ConicalBottomSA"></p>
+                <p class="ConicalBottom_param"><sup></sup></p>
+            </div>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="ConicalLateralSA"></p>
+                <p class="Conical_Lateral_param"><sup></sup></p>
+            </div>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="ConicalTotalSA"></p>
+                <p class="ConicalTotal_param"><sup></sup></p>
+            </div>
+
+
+
+
+            <button onclick="conicalSurfaceArea()">Submit</button>
+        </div>
+
     </main>
 
     <a href="new.html">New</a>
