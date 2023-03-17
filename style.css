@@ -19,7 +19,7 @@ select{
 }
 
 main{
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: rgb(247, 247, 247);
     padding:10px ;
