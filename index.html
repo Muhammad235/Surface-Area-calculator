@@ -4,8 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Surface Area Calculator</title>
+    <style>
+        *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 10px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 20px;
+}
+select{
+    background-color: rgb(31, 31, 36);
+    color: white;
+    padding:5px 10px;
+}
+
+main{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(247, 247, 247);
+    padding:10px ;
+   
+}
+h1{
+    margin: 8px;
+    font-size: 30px;
+}
+.heading h1{
+   font-size: 35px;
+   font-weight: bold;
+   margin: 10px;
+}
+
+.container{
+    margin-bottom:20px ;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+button{
+    padding: 10px 40px;
+    background-color: rgb(32, 34, 32);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.answer{
+    display: flex; 
+    align-items: center;
+}
+    </style>
 </head>
 <body>
     <main>
@@ -15,8 +70,9 @@
       <div class="container">
         <h1>Ball surface area</h1>
         <div class="surface-area">
-            <Label>Radius</Label> <input type="text" id="radius">  
+            <Label>Radius</Label> <input aria-label="output" type="text" id="radius">  
             <select  id="measure">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -34,8 +90,9 @@
         <div class="container">
             <h1>Cone surface area</h1>
         <div class="surface-area">
-            <Label>Base Radius</Label> <input type="text" id="base-radius">  
+            <Label>Base Radius</Label> <input aria-label="output" type="text" id="base-radius">  
             <select  id="cone-measure">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -44,8 +101,9 @@
             </select> 
             <br>
 
-            <Label>Height</Label> <input type="text" id="height">  
+            <Label>Height</Label> <input aria-label="output" type="text" id="height">  
             <select  id="cone-measure2">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -75,8 +133,9 @@
        <div class="container">
         <h1>Cube surface area</h1>
         <div class="surface-area">
-            <Label>Edge Length</Label> <input type="text" id="length">  
+            <Label>Edge Length</Label> <input type="text" aria-label="output" id="length">  
             <select  id="cube-meausure">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -97,8 +156,9 @@
        <div class="container">
         <h1>Cylindrical Tank surface area</h1>
         <div class="surface-area">
-            <Label>Base Radius</Label> <input type="text" id="top-base-radius">  
+            <Label>Base Radius</Label> <input type="text" aria-label="output" id="top-base-radius">  
             <select  id="cylin-measure">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -107,8 +167,9 @@
             </select> 
             <br>
 
-            <Label>Height</Label> <input type="text" id="cylin-height">  
+            <Label>Height</Label> <input aria-label="output" type="text" id="cylin-height">  
             <select  id="cylin-measure1">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -147,8 +208,9 @@
        <div class="container">
         <h1>Rectangular Tank Surface Area</h1>
         <div class="surface-area">
-            <Label>Length</Label> <input type="text" id="tank-length">  
+            <Label>Length</Label> <input aria-label="output" type="text" id="tank-length">  
             <select  id="tank-measure1">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -158,8 +220,9 @@
 
             <br>
 
-            <Label>Width</Label> <input type="text" id="tank-width">  
+            <Label>Width</Label> <input aria-label="output" type="text" id="tank-width">  
             <select  id="tank-measure2">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -169,8 +232,9 @@
 
             <br>
 
-            <Label>Height</Label> <input type="text" id="tank-height">  
+            <Label>Height</Label> <input aria-label="output" type="text" id="tank-height">  
             <select  id="tank-measure3">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -195,8 +259,9 @@
          <div class="container">
             <h1>Capsule Surface Area</h1>
          <div class="surface-area">
-             <Label>Base Radius</Label> <input type="text" id="capsule_radius">  
+             <Label>Base Radius</Label> <input aria-label="output" type="text" id="capsule_radius">  
              <select  id="capsule-measure1">
+                <option value="centimeter">Centimeter</option>
                  <option value="feet">Feet</option>
                  <option value="mile">Mile</option>
                  <option value="yard">Yard</option>
@@ -205,8 +270,9 @@
              </select> 
              <br>
  
-             <Label>Height</Label> <input type="text" id="capsule_height">  
+             <Label>Height</Label> <input aria-label="output" type="text" id="capsule_height">  
              <select  id="capsule-measure2">
+                <option value="centimeter">Centimeter</option>
                  <option value="feet">Feet</option>
                  <option value="mile">Mile</option>
                  <option value="yard">Yard</option>
@@ -244,8 +310,9 @@
         <div class="container">
             <h1>Cap Surface Area</h1>
         <div class="surface-area">
-            <Label>Length</Label> <input type="text" id="cap_radius">  
+            <Label>Length</Label> <input aria-label="output" type="text" id="cap_radius">  
             <select  id="cap_measure1">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -255,8 +322,9 @@
 
             <br>
 
-            <Label>Ball Radius</Label> <input type="text" id="capBall_radius">  
+            <Label>Ball Radius</Label> <input aria-label="output" type="text" id="capBall_radius">  
             <select  id="cap_measure2">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -266,8 +334,9 @@
 
             <br>
 
-            <Label>Height</Label> <input type="text" id="cap_height">  
+            <Label>Height</Label> <input aria-label="output" type="text" id="cap_height">  
             <select  id="cap_measure3">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -292,8 +361,9 @@
        <div class="container">
         <h1>Conical Frustum Surface Area</h1>
         <div class="surface-area">
-            <Label>Top Radius</Label> <input type="text" id="conicalTop_radius">  
+            <Label>Top Radius</Label> <input aria-label="output" type="text" id="conicalTop_radius">  
             <select  id="conical_measure1">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -303,8 +373,9 @@
 
             <br>
 
-            <Label>Bottom Radius</Label> <input type="text" id="conicalBottom_radius">  
+            <Label>Bottom Radius</Label> <input aria-label="output" type="text" id="conicalBottom_radius">  
             <select  id="conical_measure2">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -314,8 +385,9 @@
 
             <br>
 
-            <Label>Height</Label> <input type="text" id="conical_height">  
+            <Label>Height</Label> <input aria-label="output" type="text" id="conical_height">  
             <select  id="conical_mesure">
+                <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
                 <option value="yard">Yard</option>
@@ -353,8 +425,9 @@
     
     <h1>Ellipsoid Surface Area</h1>
     <div class="surface-area">
-        <Label>Axis 1</Label> <input type="text" id="axis1">  
+        <Label>Axis 1</Label> <input aria-label="output" type="text" id="axis1">  
         <select  id="axis_measure1">
+            <option value="centimeter">Centimeter</option>
             <option value="feet">Feet</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
@@ -364,8 +437,9 @@
 
         <br>
 
-        <Label>Axis 2</Label> <input type="text" id="axis2">  
+        <Label>Axis 2</Label> <input aria-label="output" type="text" id="axis2">  
         <select  id="axis_measure2">
+            <option value="centimeter">Centimeter</option>
             <option value="feet">Feet</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
@@ -375,8 +449,9 @@
 
         <br>
 
-        <Label>Axis 3</Label> <input type="text" id="axis3">  
+        <Label>Axis 3</Label> <input aria-label="output" type="text" id="axis3">  
         <select  id="axis_measure3">
+            <option value="centimeter">Centimeter</option>
             <option value="feet">Feet</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
@@ -400,8 +475,9 @@
     
     <h1>Square Pyramid Surface Area</h1>
     <div class="surface-area">
-        <Label>Base Edge</Label> <input type="text" id="pyramid_edge">  
+        <Label>Base Edge</Label> <input aria-label="output" type="text" id="pyramid_edge">  
         <select  id="pyramid_measure1">
+            <option value="centimeter">Centimeter</option>
             <option value="feet">Feet</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
@@ -411,8 +487,9 @@
 
         <br>
 
-        <Label>Height</Label> <input type="text" id="pyramid_height">  
+        <Label>Height</Label> <input aria-label="output" type="text" id="pyramid_height">  
         <select  id="pyramid_measure2">
+            <option value="centimeter">Centimeter</option>
             <option value="feet">Feet</option>
             <option value="mile">Mile</option>
             <option value="yard">Yard</option>
@@ -441,8 +518,356 @@
 
     </main>
 
-    <a href="new.html">New</a>
+ 
 
-    <script src="app.js"></script>
+    <script>
+        function getOption() {
+    selectElement = document.querySelector('#measure');
+    output = selectElement.value;
+
+    radius = document.getElementById('radius').value;
+
+    surfaceArea = `${4 * 3.14 * radius * radius}`;
+
+    document.querySelector('.output').textContent = surfaceArea;
+
+    document.querySelector('.parameter').textContent = output;
+
+    console.log(surfaceArea);
+
+}
+
+function coneSurface() {
+    selectElement1 = document.querySelector('#cone-measure1');
+    selectElement2 = document.querySelector('#cone-measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    Baseradius = document.getElementById('base-radius').value;
+
+    Height = document.getElementById('height').value;
+
+
+    // base surface area
+
+    BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.BSA').textContent = BaseSurfaceArea;
+
+    document.querySelector('.parameter1').textContent = param1;
+
+
+    // Lateral surface area
+
+    
+    LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+
+    document.querySelector('.LSA').textContent = LateralSurfaceArea;
+
+    document.querySelector('.parameter2').textContent = param2;
+
+
+}
+
+
+function coneSurface() {
+    selectElement1 = document.querySelector('#cone-measure1');
+    selectElement2 = document.querySelector('#cone-measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    Baseradius = document.getElementById('base-radius').value;
+
+    Height = document.getElementById('height').value;
+
+
+    // base surface area
+
+    BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.BSA').textContent = BaseSurfaceArea;
+
+    document.querySelector('.parameter1').textContent = param1;
+
+
+    // Lateral surface area
+
+    LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+
+    document.querySelector('.LSA').textContent = LateralSurfaceArea;
+
+    document.querySelector('.parameter2').textContent = param2;
+
+
+    // Total surface area
+
+    TotalSurfaceArea = `${((BaseSurfaceArea + LateralSurfaceArea))}`;
+
+
+    document.querySelector('.TSA').textContent = TotalSurfaceArea;
+
+    document.querySelector('.parameter3').textContent = param2;
+
+
+}
+
+
+function cubeSurface() {
+    selectElement = document.querySelector('#cube-meausure');
+    output = selectElement.value;
+
+    Length = document.getElementById('length').value;
+
+    cubeSurfaceArea = `${6 * Length * Length}`;
+
+    document.querySelector('.cube-output').textContent = cubeSurfaceArea;
+
+    document.querySelector('.cube-parameter').textContent = output;
+
+    console.log(surfaceArea);
+
+}
+
+
+function CylindricalTankSurface() {
+    selectElement1 = document.querySelector('#cone-measure1');
+    selectElement2 = document.querySelector('#cone-measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    Baseradius = document.getElementById('top-base-radius').value;
+
+    Height = document.getElementById('cylin-height').value;
+
+    // Total surface area
+
+    TotalSurfaceArea = `${ 3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.TopSA').textContent = TotalSurfaceArea;
+    
+    document.querySelector('.Top-param').textContent = param1;
+
+
+
+    // base surface area
+    BottomSurfaceArea = `${ 3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.BottomSA').textContent = BottomSurfaceArea;
+    
+    document.querySelector('.Bottom-param').textContent = param2;
+
+
+    // Lateral surface area
+
+    LateralSurfaceArea = `${2 * 3.14 * Baseradius * Height}`;
+
+    document.querySelector('.LateralSA').textContent = LateralSurfaceArea;
+
+    document.querySelector('.Lateral-param').textContent = param2;
+
+
+    // Total surface area
+
+    TotalSurfaceArea = Number(TotalSurfaceArea + BottomSurfaceArea + LateralSurfaceArea);
+
+    document.querySelector('.LateralSA').textContent = TotalSurfaceArea;
+
+    document.querySelector('.Lateral-param').textContent = param2;
+
+}
+
+
+function RecTankSurface() {
+    selectElement = document.querySelector('#tank-measure1');
+
+    param_type = selectElement.value;
+
+    Length = document.getElementById('tank-length').value;
+
+    width = document.getElementById('tank-width').value;
+
+    Height = document.getElementById('tank-height').value;
+
+    TankSurfaceArea = `${2 *(Length * width + Length * Height + width * Height)}`;
+
+    document.querySelector('.TankSA').textContent = TankSurfaceArea;
+
+    document.querySelector('.Tank-param').textContent = param_type;
+
+}
+
+
+
+function CapsuleSurfaceArea() {
+    selectElement1 = document.querySelector('#capsule-measure1');
+    selectElement2 = document.querySelector('#capsule-measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    Baseradius = document.getElementById('capsule_radius').value;
+
+    Height = document.getElementById('capsule_height').value;
+
+    // Total surface area
+    TopSurfaceArea = `${ 2 * 3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.CapsuleTopSA').textContent = TopSurfaceArea;
+    
+    document.querySelector('.CapsuleTopParam').textContent = param1;
+
+
+    //base surface area
+    CapsuleBottomSA = `${ 2 * 3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.CapsuleBottomSA').textContent = CapsuleBottomSA;
+    
+    document.querySelector('.CapsuleBottom-param').textContent = param1;
+
+
+    // Lateral surface area
+
+    CapsuleLateralSA = `${2 * 3.14 * Baseradius * Height}`;
+
+    document.querySelector('.CapsuleLateralSA').textContent = CapsuleLateralSA;
+
+    document.querySelector('.Capsule_Lateral_param').textContent = param2;
+
+    // Total surface area
+    CTS = Number(TopSurfaceArea) + Number(CapsuleBottomSA) + Number(CapsuleLateralSA);
+
+    document.querySelector('.CapsuleTotalSA').textContent = CTS;
+    
+    document.querySelector('.CapsuleTotal-param').textContent = param1;
+
+}
+
+
+
+function conicalSurfaceArea() {
+    selectElement1 = document.querySelector('#conical_measure1');
+    selectElement2 = document.querySelector('#conical_measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    Topradius = document.getElementById('conicalTop_radius').value;
+
+    bottomRadius = document.getElementById('conicalBottom_radius').value;
+
+    Height = document.getElementById('conical_height').value;
+
+    // Total surface area
+
+    TotalSurfaceArea = `${3.14 * Topradius * Topradius}`;
+
+    document.querySelector('.ConicalTopSA').textContent = TotalSurfaceArea;
+    
+    document.querySelector('.ConicalTopParam').textContent = param1;
+
+
+
+    // base surface area
+    BottomSurfaceArea = `${ 3.14 * bottomRadius * bottomRadius}`;
+
+    document.querySelector('.ConicalBottomSA').textContent = BottomSurfaceArea;
+    
+    document.querySelector('.ConicalBottom_param').textContent = param2;
+
+
+    // Lateral surface area
+
+    LateralSurfaceArea = `${3.14 * (Number(bottomRadius) + Number(Topradius)) * 
+        Math.sqrt((Number(bottomRadius) - Number(Topradius)) **2 + Number(Height) **2)}`;
+
+    document.querySelector('.ConicalLateralSA').textContent = LateralSurfaceArea;
+
+    document.querySelector('.Conical_Lateral_param').textContent = param2;
+
+    // Total surface area
+    TotalSurfaceArea = Number(TotalSurfaceArea) + Number(BottomSurfaceArea) + Number(LateralSurfaceArea);
+
+    document.querySelector('.ConicalTotalSA').textContent = TotalSurfaceArea;
+
+    document.querySelector('.ConicalTotal_param').textContent = param2;
+
+}
+
+
+function ellipsoid() {
+    selectElement = document.querySelector('#axis_measure1');
+    output = selectElement.value;
+
+    Axis1 = document.getElementById('axis1').value;
+    Axis2 = document.getElementById('axis2').value;
+    Axis3 = document.getElementById('axis3').value;
+
+    Ellipsoid  = (4 * 3.14) * Math.pow(Number((Axis1 * Axis2) **1.6) + Number((Axis1 * Axis3) **1.6) + Number((Axis2 * Axis3) **1.6)/3, 1/1.6);
+
+    document.querySelector('.Ellipsoid').textContent = Ellipsoid;
+
+    document.querySelector('.elli_param').textContent = output;
+
+}
+
+
+
+function PyramidSurface() {
+    selectElement1 = document.querySelector('#pyramid_measure1');
+    selectElement2 = document.querySelector('#pyramid_measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    PyramidEdge = document.getElementById('pyramid_edge').value;
+
+    PyramidHeight = document.getElementById('pyramid_height').value;
+
+    // base surface area
+    BaseSurfaceArea = `${ PyramidEdge ** 2 }`;
+
+    document.querySelector('.BasePyramidSA').textContent = BaseSurfaceArea;
+    
+    document.querySelector('.Base-param').textContent = param1;
+
+
+    // Total surface area
+
+    TotalSurfaceArea = `${3.14 * Topradius * Topradius}`;
+
+    document.querySelector('.ConicalTopSA').textContent = TotalSurfaceArea;
+    
+    document.querySelector('.ConicalTopParam').textContent = param1;
+
+
+
+
+    // Lateral surface area
+
+    LateralSurfaceArea = `${3.14 * (Number(bottomRadius) + Number(Topradius)) * 
+        Math.sqrt((Number(bottomRadius) - Number(Topradius)) **2 + Number(Height) **2)}`;
+
+    document.querySelector('.ConicalLateralSA').textContent = LateralSurfaceArea;
+
+    document.querySelector('.Conical_Lateral_param').textContent = param2;
+
+    // Total surface area
+    TotalSurfaceArea = Number(TotalSurfaceArea) + Number(BottomSurfaceArea) + Number(LateralSurfaceArea);
+
+    document.querySelector('.ConicalTotalSA').textContent = TotalSurfaceArea;
+
+    document.querySelector('.ConicalTotal_param').textContent = param2;
+
+}
+    </script>
 </body>
 </html>
