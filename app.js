@@ -31,35 +31,44 @@ function getOption() {
 }
 
 function coneSurface() {
-    selectElement1 = document.querySelector('#cone-measure1');
-    selectElement2 = document.querySelector('#cone-measure2');
-
-    param1 = selectElement1.value;
-
-    param2 = selectElement2.value;
 
     Baseradius = document.getElementById('base-radius').value;
 
     Height = document.getElementById('height').value;
 
+    if(Baseradius == '' || Height == '') {
 
-    // base surface area
-
-    BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
-
-    document.querySelector('.BSA').textContent = BaseSurfaceArea;
-
-    document.querySelector('.parameter1').textContent = param1;
-
-
-    // Lateral surface area
-
+        error2.innerHTML = 'Input can not be empty';
     
-    LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+      }else if(isNaN(Baseradius) || isNaN(Height) || Baseradius < 0 || Height < 0){
+        
+        error2.innerHTML = 'Input must be a positive number';
 
-    document.querySelector('.LSA').textContent = LateralSurfaceArea;
+      }else{
 
-    document.querySelector('.parameter2').textContent = param2;
+
+      selectElement1 = document.querySelector('#cone-measure1');
+      selectElement2 = document.querySelector('#cone-measure2');
+    
+       param1 = selectElement1.value;
+       param2 = selectElement2.value;
+
+        // base surface area
+        BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
+
+        document.querySelector('.BSA').textContent = BaseSurfaceArea;
+
+        document.querySelector('.parameter1').textContent = param1;
+
+        // Lateral surface area
+ 
+        LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+
+        document.querySelector('.LSA').textContent = LateralSurfaceArea;
+
+        document.querySelector('.parameter2').textContent = param2;
+
+      }
 
 
 }
