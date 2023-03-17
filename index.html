@@ -82,9 +82,11 @@
         </div>
 
 
+        <!-- cylindricalSurface -->
+
         <h1>Cylindrical Tank surface area</h1>
         <div class="surface-area">
-            <Label>Base Radius</Label> <input type="text" id="base-radius">  
+            <Label>Base Radius</Label> <input type="text" id="top-base-radius">  
             <select name="" id="cone-measure1">
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
@@ -94,7 +96,7 @@
             </select> 
             <br>
 
-            <Label>Height</Label> <input type="text" id="height">  
+            <Label>Height</Label> <input type="text" id="cylin-height">  
             <select name="" id="cone-measure2">
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>
@@ -104,15 +106,72 @@
             </select> 
 
             <div class="answer" style="display: flex; align-items: center;">
-                <p class="BSA"></p>
-                <p class="parameter1"><sup></sup></p>
+                <p class="TopSA"></p>
+                <p class="Top-param"><sup></sup></p>
             </div>
 
             <div class="answer" style="display: flex; align-items: center;">
-                <p class="LSA"></p>
-                <p class="parameter2"><sup></sup></p>
+                <p class="BottomSA"></p>
+                <p class="Bottom-param"><sup></sup></p>
             </div>
-            <button onclick="coneSurface()">Submit</button>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="LateralSA"></p>
+                <p class="Lateral-param"><sup></sup></p>
+            </div>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="TotalSA"></p>
+                <p class="Total-param"><sup></sup></p>
+            </div>
+
+            <button onclick="CylindricalTankSurface()">Submit</button>
+        </div>
+
+
+        
+        <!-- Rectangular Tank Surface Area -->
+
+        <h1>Rectangular Tank Surface Area</h1>
+        <div class="surface-area">
+            <Label>Length</Label> <input type="text" id="tank-length">  
+            <select name="" id="tank-measure1">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <br>
+
+            <Label>Width</Label> <input type="text" id="tank-width">  
+            <select name="" id="tank-measure2">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <br>
+
+            <Label>Height</Label> <input type="text" id="tank-height">  
+            <select name="" id="tank-measure3">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="TankSA"></p>
+                <p class="Tank-param"><sup></sup></p>
+            </div>
+
+
+            <button onclick="RecTankSurface()">Submit</button>
         </div>
 
     </main>

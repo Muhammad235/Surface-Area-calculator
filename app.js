@@ -110,7 +110,9 @@ function cubeSurface() {
 }
 
 
-function coneSurface() {
+
+
+function CylindricalTankSurface() {
     selectElement1 = document.querySelector('#cone-measure1');
     selectElement2 = document.querySelector('#cone-measure2');
 
@@ -118,28 +120,65 @@ function coneSurface() {
 
     param2 = selectElement2.value;
 
-    Baseradius = document.getElementById('base-radius').value;
+    Baseradius = document.getElementById('top-base-radius').value;
 
-    Height = document.getElementById('height').value;
+    Height = document.getElementById('cylin-height').value;
+
+    // Total surface area
+
+    TotalSurfaceArea = `${ 3.14 * Baseradius * Baseradius}`;
+
+    document.querySelector('.TopSA').textContent = TotalSurfaceArea;
+    
+    document.querySelector('.Top-param').textContent = param1;
+
 
 
     // base surface area
+    BottomSurfaceArea = `${ 3.14 * Baseradius * Baseradius}`;
 
-    BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
-
-    document.querySelector('.BSA').textContent = BaseSurfaceArea;
-
-    document.querySelector('.parameter1').textContent = param1;
+    document.querySelector('.BottomSA').textContent = BottomSurfaceArea;
+    
+    document.querySelector('.Bottom-param').textContent = param2;
 
 
     // Lateral surface area
 
-    
-    LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+    LateralSurfaceArea = `${2 * 3.14 * Baseradius * Height}`;
 
-    document.querySelector('.LSA').textContent = LateralSurfaceArea;
+    document.querySelector('.LateralSA').textContent = LateralSurfaceArea;
 
-    document.querySelector('.parameter2').textContent = param2;
+    document.querySelector('.Lateral-param').textContent = param2;
+
+
+    // Total surface area
+
+    TotalSurfaceArea = Number(TotalSurfaceArea + BottomSurfaceArea + LateralSurfaceArea);
+
+    document.querySelector('.LateralSA').textContent = TotalSurfaceArea;
+
+    document.querySelector('.Lateral-param').textContent = param2;
+
+}
+
+
+function RecTankSurface() {
+    selectElement = document.querySelector('#tank-measure1');
+
+    param_type = selectElement.value;
+
+    Length = document.getElementById('tank-length').value;
+
+    width = document.getElementById('tank-width').value;
+
+    Height = document.getElementById('tank-height').value;
+
+    TankSurfaceArea = `${2 *(Length * width + Length * Height + width * Height)}`;
+
+    document.querySelector('.TankSA').textContent = TankSurfaceArea;
+
+    document.querySelector('.Tank-param').textContent = param_type;
+
 
 
 }
