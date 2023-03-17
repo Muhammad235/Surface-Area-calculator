@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
+      <div class="container">
         <h1>Ball surface area</h1>
         <div class="surface-area">
             <Label>Radius</Label> <input type="text" id="radius">  
@@ -24,8 +26,10 @@
             </div>
             <button onclick="getOption()">Submit</button>
         </div>
+      </div>
 
-        <h1>Cone surface area</h1>
+        <div class="container">
+            <h1>Cone surface area</h1>
         <div class="surface-area">
             <Label>Base Radius</Label> <input type="text" id="base-radius">  
             <select name="" id="cone-measure1">
@@ -64,6 +68,8 @@
             <button onclick="coneSurface()">Submit</button>
         </div>
 
+        </div>
+       <div class="container">
         <h1>Cube surface area</h1>
         <div class="surface-area">
             <Label>Edge Length</Label> <input type="text" id="length">  
@@ -80,10 +86,12 @@
             </div>
             <button onclick="cubeSurface()">Submit</button>
         </div>
+       </div>
 
 
         <!-- cylindricalSurface -->
 
+       <div class="container">
         <h1>Cylindrical Tank surface area</h1>
         <div class="surface-area">
             <Label>Base Radius</Label> <input type="text" id="top-base-radius">  
@@ -127,11 +135,13 @@
 
             <button onclick="CylindricalTankSurface()">Submit</button>
         </div>
+       </div>
 
 
         
         <!-- Rectangular Tank Surface Area -->
 
+       <div class="container">
         <h1>Rectangular Tank Surface Area</h1>
         <div class="surface-area">
             <Label>Length</Label> <input type="text" id="tank-length">  
@@ -174,11 +184,13 @@
             <button onclick="RecTankSurface()">Submit</button>
         </div>
 
+       </div>
 
 
          <!-- Capsule Surface Area -->
 
-         <h1>Capsule Surface Area</h1>
+         <div class="container">
+            <h1>Capsule Surface Area</h1>
          <div class="surface-area">
              <Label>Base Radius</Label> <input type="text" id="capsule_radius">  
              <select name="" id="capsule-measure1">
@@ -221,11 +233,13 @@
  
              <button onclick="CapsuleSurfaceArea()">Submit</button>
          </div>
+         </div>
 
 
         <!-- Cap Surface Area -->
 
-        <h1>Cap Surface Area</h1>
+        <div class="container">
+            <h1>Cap Surface Area</h1>
         <div class="surface-area">
             <Label>Length</Label> <input type="text" id="cap_radius">  
             <select name="" id="cap_measure1">
@@ -267,10 +281,12 @@
             <button onclick="RecTankSurface()">Submit</button>
         </div>
 
+        </div>
 
         
         <!-- Conical Frustum Surface Area -->
 
+       <div class="container">
         <h1>Conical Frustum Surface Area</h1>
         <div class="surface-area">
             <Label>Top Radius</Label> <input type="text" id="conicalTop_radius">  
@@ -326,94 +342,99 @@
 
             <button onclick="ellipsoid()">Submit</button>
         </div>
+       </div>
 
 
                 <!-- Ellipsoid Surface Area -->
+<div class="container">
+    
+    <h1>Ellipsoid Surface Area</h1>
+    <div class="surface-area">
+        <Label>Axis 1</Label> <input type="text" id="axis1">  
+        <select name="" id="axis_measure1">
+            <option value="feet">Feet</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="inches">Inches</option>
+            <option value="kilometer">Kilometer</option>
+        </select> 
 
-                <h1>Ellipsoid Surface Area</h1>
-                <div class="surface-area">
-                    <Label>Axis 1</Label> <input type="text" id="axis1">  
-                    <select name="" id="axis_measure1">
-                        <option value="feet">Feet</option>
-                        <option value="mile">Mile</option>
-                        <option value="yard">Yard</option>
-                        <option value="inches">Inches</option>
-                        <option value="kilometer">Kilometer</option>
-                    </select> 
-        
-                    <br>
-        
-                    <Label>Axis 2</Label> <input type="text" id="axis2">  
-                    <select name="" id="axis_measure2">
-                        <option value="feet">Feet</option>
-                        <option value="mile">Mile</option>
-                        <option value="yard">Yard</option>
-                        <option value="inches">Inches</option>
-                        <option value="kilometer">Kilometer</option>
-                    </select> 
-        
-                    <br>
-        
-                    <Label>Axis 3</Label> <input type="text" id="axis3">  
-                    <select name="" id="axis_measure3">
-                        <option value="feet">Feet</option>
-                        <option value="mile">Mile</option>
-                        <option value="yard">Yard</option>
-                        <option value="inches">Inches</option>
-                        <option value="kilometer">Kilometer</option>
-                    </select> 
-        
-                    <div class="answer" style="display: flex; align-items: center;">
-                        <p class="Ellipsoid"></p>
-                        <p class="elli_param"><sup></sup></p>
-                    </div>
-        
-        
-                    <button onclick="ellipsoid()">Submit</button>
-                </div>
+        <br>
 
+        <Label>Axis 2</Label> <input type="text" id="axis2">  
+        <select name="" id="axis_measure2">
+            <option value="feet">Feet</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="inches">Inches</option>
+            <option value="kilometer">Kilometer</option>
+        </select> 
+
+        <br>
+
+        <Label>Axis 3</Label> <input type="text" id="axis3">  
+        <select name="" id="axis_measure3">
+            <option value="feet">Feet</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="inches">Inches</option>
+            <option value="kilometer">Kilometer</option>
+        </select> 
+
+        <div class="answer" style="display: flex; align-items: center;">
+            <p class="Ellipsoid"></p>
+            <p class="elli_param"><sup></sup></p>
+        </div>
+
+
+        <button onclick="ellipsoid()">Submit</button>
+    </div>
+
+</div>
                 
                 <!-- Square Pyramid Surface Area -->
+<div class="container">
+    
+    <h1>Square Pyramid Surface Area</h1>
+    <div class="surface-area">
+        <Label>Base Edge</Label> <input type="text" id="pyramid_edge">  
+        <select name="" id="pyramid_measure1">
+            <option value="feet">Feet</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="inches">Inches</option>
+            <option value="kilometer">Kilometer</option>
+        </select> 
 
-                <h1>Square Pyramid Surface Area</h1>
-                <div class="surface-area">
-                    <Label>Base Edge</Label> <input type="text" id="pyramid_edge">  
-                    <select name="" id="pyramid_measure1">
-                        <option value="feet">Feet</option>
-                        <option value="mile">Mile</option>
-                        <option value="yard">Yard</option>
-                        <option value="inches">Inches</option>
-                        <option value="kilometer">Kilometer</option>
-                    </select> 
+        <br>
 
-                    <br>
+        <Label>Height</Label> <input type="text" id="pyramid_height">  
+        <select name="" id="pyramid_measure2">
+            <option value="feet">Feet</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="inches">Inches</option>
+            <option value="kilometer">Kilometer</option>
+        </select> 
 
-                    <Label>Height</Label> <input type="text" id="pyramid_height">  
-                    <select name="" id="pyramid_measure2">
-                        <option value="feet">Feet</option>
-                        <option value="mile">Mile</option>
-                        <option value="yard">Yard</option>
-                        <option value="inches">Inches</option>
-                        <option value="kilometer">Kilometer</option>
-                    </select> 
+        <div class="answer" style="display: flex; align-items: center;">
+            <p class="BasePyramidSA"></p>
+            <p class="Base-param"><sup></sup></p>
+        </div>
 
-                    <div class="answer" style="display: flex; align-items: center;">
-                        <p class="BasePyramidSA"></p>
-                        <p class="Base-param"><sup></sup></p>
-                    </div>
+        <div class="answer" style="display: flex; align-items: center;">
+            <p class="LateralPyramidSA"></p>
+            <p class="Lateral-param"><sup></sup></p>
+        </div>
 
-                    <div class="answer" style="display: flex; align-items: center;">
-                        <p class="LateralPyramidSA"></p>
-                        <p class="Lateral-param"><sup></sup></p>
-                    </div>
-
-                    <div class="answer" style="display: flex; align-items: center;">
-                        <p class="TotalPyramidSA"></p>
-                    </div>
+        <div class="answer" style="display: flex; align-items: center;">
+            <p class="TotalPyramidSA"></p>
+        </div>
 
 
-                    <button onclick="PyramidSurface()">Submit</button>
-                </div>
+        <button onclick="PyramidSurface()">Submit</button>
+    </div>
+</div>
 
     </main>
 
