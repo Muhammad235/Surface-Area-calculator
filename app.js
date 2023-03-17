@@ -269,9 +269,75 @@ function conicalSurfaceArea() {
 
     document.querySelector('.Conical_Lateral_param').textContent = param2;
 
+    // Total surface area
+    TotalSurfaceArea = Number(TotalSurfaceArea) + Number(BottomSurfaceArea) + Number(LateralSurfaceArea);
+
+    document.querySelector('.ConicalTotalSA').textContent = TotalSurfaceArea;
+
+    document.querySelector('.ConicalTotal_param').textContent = param2;
+
+}
+
+
+function ellipsoid() {
+    selectElement = document.querySelector('#axis_measure1');
+    output = selectElement.value;
+
+    Axis1 = document.getElementById('axis1').value;
+    Axis2 = document.getElementById('axis2').value;
+    Axis3 = document.getElementById('axis3').value;
+
+    Ellipsoid  = (4 * 3.14) * Math.pow(Number((Axis1 * Axis2) **1.6) + Number((Axis1 * Axis3) **1.6) + Number((Axis2 * Axis3) **1.6)/3, 1/1.6);
+
+    document.querySelector('.Ellipsoid').textContent = Ellipsoid;
+
+    document.querySelector('.elli_param').textContent = output;
+
+}
+
+
+
+function PyramidSurface() {
+    selectElement1 = document.querySelector('#pyramid_measure1');
+    selectElement2 = document.querySelector('#pyramid_measure2');
+
+    param1 = selectElement1.value;
+
+    param2 = selectElement2.value;
+
+    PyramidEdge = document.getElementById('pyramid_edge').value;
+
+    PyramidHeight = document.getElementById('pyramid_height').value;
+
+    // base surface area
+    BaseSurfaceArea = `${ PyramidEdge ** 2 }`;
+
+    document.querySelector('.BasePyramidSA').textContent = BaseSurfaceArea;
+    
+    document.querySelector('.Base-param').textContent = param1;
+
 
     // Total surface area
 
+    TotalSurfaceArea = `${3.14 * Topradius * Topradius}`;
+
+    document.querySelector('.ConicalTopSA').textContent = TotalSurfaceArea;
+    
+    document.querySelector('.ConicalTopParam').textContent = param1;
+
+
+
+
+    // Lateral surface area
+
+    LateralSurfaceArea = `${3.14 * (Number(bottomRadius) + Number(Topradius)) * 
+        Math.sqrt((Number(bottomRadius) - Number(Topradius)) **2 + Number(Height) **2)}`;
+
+    document.querySelector('.ConicalLateralSA').textContent = LateralSurfaceArea;
+
+    document.querySelector('.Conical_Lateral_param').textContent = param2;
+
+    // Total surface area
     TotalSurfaceArea = Number(TotalSurfaceArea) + Number(BottomSurfaceArea) + Number(LateralSurfaceArea);
 
     document.querySelector('.ConicalTotalSA').textContent = TotalSurfaceArea;

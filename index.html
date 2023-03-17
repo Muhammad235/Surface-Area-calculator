@@ -324,11 +324,96 @@
                 <p class="ConicalTotal_param"><sup></sup></p>
             </div>
 
-
-
-
-            <button onclick="conicalSurfaceArea()">Submit</button>
+            <button onclick="ellipsoid()">Submit</button>
         </div>
+
+
+                <!-- Ellipsoid Surface Area -->
+
+                <h1>Ellipsoid Surface Area</h1>
+                <div class="surface-area">
+                    <Label>Axis 1</Label> <input type="text" id="axis1">  
+                    <select name="" id="axis_measure1">
+                        <option value="feet">Feet</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                        <option value="inches">Inches</option>
+                        <option value="kilometer">Kilometer</option>
+                    </select> 
+        
+                    <br>
+        
+                    <Label>Axis 2</Label> <input type="text" id="axis2">  
+                    <select name="" id="axis_measure2">
+                        <option value="feet">Feet</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                        <option value="inches">Inches</option>
+                        <option value="kilometer">Kilometer</option>
+                    </select> 
+        
+                    <br>
+        
+                    <Label>Axis 3</Label> <input type="text" id="axis3">  
+                    <select name="" id="axis_measure3">
+                        <option value="feet">Feet</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                        <option value="inches">Inches</option>
+                        <option value="kilometer">Kilometer</option>
+                    </select> 
+        
+                    <div class="answer" style="display: flex; align-items: center;">
+                        <p class="Ellipsoid"></p>
+                        <p class="elli_param"><sup></sup></p>
+                    </div>
+        
+        
+                    <button onclick="ellipsoid()">Submit</button>
+                </div>
+
+                
+                <!-- Square Pyramid Surface Area -->
+
+                <h1>Square Pyramid Surface Area</h1>
+                <div class="surface-area">
+                    <Label>Base Edge</Label> <input type="text" id="pyramid_edge">  
+                    <select name="" id="pyramid_measure1">
+                        <option value="feet">Feet</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                        <option value="inches">Inches</option>
+                        <option value="kilometer">Kilometer</option>
+                    </select> 
+
+                    <br>
+
+                    <Label>Height</Label> <input type="text" id="pyramid_height">  
+                    <select name="" id="pyramid_measure2">
+                        <option value="feet">Feet</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                        <option value="inches">Inches</option>
+                        <option value="kilometer">Kilometer</option>
+                    </select> 
+
+                    <div class="answer" style="display: flex; align-items: center;">
+                        <p class="BasePyramidSA"></p>
+                        <p class="Base-param"><sup></sup></p>
+                    </div>
+
+                    <div class="answer" style="display: flex; align-items: center;">
+                        <p class="LateralPyramidSA"></p>
+                        <p class="Lateral-param"><sup></sup></p>
+                    </div>
+
+                    <div class="answer" style="display: flex; align-items: center;">
+                        <p class="TotalPyramidSA"></p>
+                    </div>
+
+
+                    <button onclick="PyramidSurface()">Submit</button>
+                </div>
 
     </main>
 
