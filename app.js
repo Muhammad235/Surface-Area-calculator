@@ -36,12 +36,14 @@ function coneSurface() {
 
     Height = document.getElementById('height').value;
 
+    error2 = document.querySelector('.error2');
+
     if(Baseradius == '' || Height == '') {
 
         error2.innerHTML = 'Input can not be empty';
     
       }else if(isNaN(Baseradius) || isNaN(Height) || Baseradius < 0 || Height < 0){
-        
+
         error2.innerHTML = 'Input must be a positive number';
 
       }else{
@@ -74,48 +76,48 @@ function coneSurface() {
 }
 
 
-function coneSurface() {
-    selectElement1 = document.querySelector('#cone-measure1');
-    selectElement2 = document.querySelector('#cone-measure2');
+// function coneSurface() {
+//     selectElement1 = document.querySelector('#cone-measure1');
+//     selectElement2 = document.querySelector('#cone-measure2');
 
-    param1 = selectElement1.value;
+//     param1 = selectElement1.value;
 
-    param2 = selectElement2.value;
+//     param2 = selectElement2.value;
 
-    Baseradius = document.getElementById('base-radius').value;
+//     Baseradius = document.getElementById('base-radius').value;
 
-    Height = document.getElementById('height').value;
-
-
-    // base surface area
-
-    BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
-
-    document.querySelector('.BSA').textContent = BaseSurfaceArea;
-
-    document.querySelector('.parameter1').textContent = param1;
+//     Height = document.getElementById('height').value;
 
 
-    // Lateral surface area
+//     // base surface area
 
-    LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+//     BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
 
-    document.querySelector('.LSA').textContent = LateralSurfaceArea;
+//     document.querySelector('.BSA').textContent = BaseSurfaceArea;
 
-    document.querySelector('.parameter2').textContent = param2;
-
-
-    // Total surface area
-
-    TotalSurfaceArea = `${((BaseSurfaceArea + LateralSurfaceArea))}`;
+//     document.querySelector('.parameter1').textContent = param1;
 
 
-    document.querySelector('.TSA').textContent = TotalSurfaceArea;
+//     // Lateral surface area
 
-    document.querySelector('.parameter3').textContent = param2;
+//     LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+
+//     document.querySelector('.LSA').textContent = LateralSurfaceArea;
+
+//     document.querySelector('.parameter2').textContent = param2;
 
 
-}
+//     // Total surface area
+
+//     TotalSurfaceArea = `${((BaseSurfaceArea + LateralSurfaceArea))}`;
+
+
+//     document.querySelector('.TSA').textContent = TotalSurfaceArea;
+
+//     document.querySelector('.parameter3').textContent = param2;
+
+
+// }
 
 
 function cubeSurface() {
