@@ -1,21 +1,9 @@
 
-
-radius = document.querySelector('.radius').value;
-
-// else{
-      
-
- 
-//    }
-
-
-
 function getOption() {
 
     radius = document.getElementById('radius').value;
 
     error = document.querySelector('.error');
-
 
     if(radius == '') {
 
@@ -39,7 +27,6 @@ function getOption() {
 
       }
 
-    
     
 }
 
