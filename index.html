@@ -7,12 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .error{
+        color: red;
+    }
+</style>
 <body>
     <main>
       <div class="container">
         <h1>Ball surface area</h1>
+        <p class="error"></p>
         <div class="surface-area">
-            <Label>Radius</Label> <input type="text" id="radius">  
+            <Label>Radius</Label> <input class="radius" type="text" id="radius">  
             <select name="" id="measure">
                 <option value="feet">Feet</option>
                 <option value="mile">Mile</option>

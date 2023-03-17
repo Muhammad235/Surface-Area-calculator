@@ -1,17 +1,46 @@
+
+
+radius = document.querySelector('.radius').value;
+
+// else{
+      
+
+ 
+//    }
+
+
+
 function getOption() {
-    selectElement = document.querySelector('#measure');
-    output = selectElement.value;
 
     radius = document.getElementById('radius').value;
 
-    surfaceArea = `${4 * 3.14 * radius * radius}`;
+    error = document.querySelector('.error');
 
-    document.querySelector('.output').textContent = surfaceArea;
 
-    document.querySelector('.parameter').textContent = output;
+    if(radius == '') {
 
-    console.log(surfaceArea);
+        error.innerHTML = 'Input can not be empty';
+    
+      }else if(isNaN(radius) || radius < 0){
+        error.innerHTML = 'Input must be a positive number';
 
+      }else{
+
+        selectElement = document.querySelector('#measure');
+        output = selectElement.value;
+        
+        surfaceArea = `${4 * 3.14 * radius * radius}`;
+        
+        document.querySelector('.output').textContent = surfaceArea;
+        
+        document.querySelector('.parameter').textContent = output;
+        
+        console.log(surfaceArea);
+
+      }
+
+    
+    
 }
 
 function coneSurface() {
