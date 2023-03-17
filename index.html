@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Ball surface area</h1>
+        <div class="surface-area">
+            <Label>Radius</Label> <input type="text" id="radius">  
+            <select name="" id="measure">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select>
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="output"></p>
+                <p class="parameter"><sup></sup></p>
+            </div>
+            <button onclick="getOption()">Submit</button>
+        </div>
+
+        <h1>Cone surface area</h1>
+        <div class="surface-area">
+            <Label>Base Radius</Label> <input type="text" id="base-radius">  
+            <select name="" id="cone-measure1">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+            <br>
+
+            <Label>Height</Label> <input type="text" id="height">  
+            <select name="" id="cone-measure2">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="BSA"></p>
+                <p class="parameter1"><sup></sup></p>
+            </div>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="LSA"></p>
+                <p class="parameter2"><sup></sup></p>
+            </div>
+            <button onclick="coneSurface()">Submit</button>
+        </div>
+
+        <h1>Cube surface area</h1>
+        <div class="surface-area">
+            <Label>Edge Length</Label> <input type="text" id="length">  
+            <select name="" id="cube-meausure">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select>
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="cube-output"></p>
+                <p class="cube-parameter"><sup></sup></p>
+            </div>
+            <button onclick="cubeSurface()">Submit</button>
+        </div>
+
+
+        <h1>Cylindrical Tank surface area</h1>
+        <div class="surface-area">
+            <Label>Base Radius</Label> <input type="text" id="base-radius">  
+            <select name="" id="cone-measure1">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+            <br>
+
+            <Label>Height</Label> <input type="text" id="height">  
+            <select name="" id="cone-measure2">
+                <option value="feet">Feet</option>
+                <option value="mile">Mile</option>
+                <option value="yard">Yard</option>
+                <option value="inches">Inches</option>
+                <option value="kilometer">Kilometer</option>
+            </select> 
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="BSA"></p>
+                <p class="parameter1"><sup></sup></p>
+            </div>
+
+            <div class="answer" style="display: flex; align-items: center;">
+                <p class="LSA"></p>
+                <p class="parameter2"><sup></sup></p>
+            </div>
+            <button onclick="coneSurface()">Submit</button>
+        </div>
+
+    </main>
+
+    <a href="new.html">New</a>
+
+    <script src="app.js"></script>
+</body>
+</html>
