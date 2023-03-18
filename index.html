@@ -155,7 +155,7 @@
                 <option value="kilometer">Kilometer</option>
             </select>
             <div class="answer">
-                <p class="cube-output"></p>
+                <label for="">Surface Area :</label> <p class="cube-output"></p>
                 <p class="cube-parameter"><sup></sup></p>
             </div>
             <button onclick="cubeSurface()">Submit</button>
@@ -189,22 +189,22 @@
             </select> 
 
             <div class="answer">
-                <p class="TopSA"></p>
+                <label for="">Top Surface Area :</label><p class="TopSA"></p>
                 <p class="Top-param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="BottomSA"></p>
+                <label for="">Bottom Surface Area :</label> <p class="BottomSA"></p>
                 <p class="Bottom-param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="LateralSA"></p>
+                <label for="">Lateral Surface Area :</label><p class="LateralSA"></p>
                 <p class="Lateral-param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="TotalSA"></p>
+                <label for="">Total Surface Area :</label> <p class="TotalSA"></p>
                 <p class="Total-param"><sup></sup></p>
             </div>
 
@@ -216,7 +216,7 @@
         
         <!-- Rectangular Tank Surface Area -->
 
-       <!-- <div class="container">
+       <div class="container">
         <h1>Rectangular Tank Surface Area</h1>
         <div class="surface-area">
             <Label>Length</Label> <input type="text" id="tank-length">  
@@ -251,7 +251,7 @@
             </select> 
 
             <div class="answer">
-                <p class="TankSA"></p>
+                <label for="">Surface Area :</label><p class="TankSA"></p>
                 <p class="Tank-param"><sup></sup></p>
             </div>
 
@@ -259,7 +259,7 @@
             <button onclick="RecTankSurface()">Submit</button>
         </div>
 
-       </div> -->
+       </div>
 
 
          <!-- Capsule Surface Area -->
@@ -288,22 +288,23 @@
              </select> 
  
              <div class="answer">
-                 <p class="CapsuleTopSA"></p>
+                <label for="">Top Surface Area :</label> <p class="CapsuleTopSA"></p>
                  <p class="CapsuleTopParam"><sup></sup></p>
              </div>
  
              <div class="answer">
-                 <p class="CapsuleBottomSA"></p>
+                <label for="">Bottom Surface Area :</label> <p class="CapsuleBottomSA"></p>
                  <p class="CapsuleBottom-param"><sup></sup></p>
              </div>
  
              <div class="answer">
-                 <p class="CapsuleLateralSA"></p>
+                <label for="">
+                    Lateral Surface Area :</label><p class="CapsuleLateralSA"></p>
                  <p class="Capsule_Lateral_param"><sup></sup></p>
              </div>
  
              <div class="answer">
-                 <p class="CapsuleTotalSA"></p>
+               <label for="">Total Surface Area :</label>  <p class="CapsuleTotalSA"></p>
                  <p class="CapsuleTotal-param"><sup></sup></p>
              </div>
  
@@ -355,7 +356,7 @@
             </div>
 
 
-            <button onclick="RecTankSurface()">Submit</button>
+            <button onclick="">Submit</button>
         </div>
 
         </div>
@@ -399,22 +400,22 @@
             </select> 
 
             <div class="answer">
-                <p class="ConicalTopSA"></p>
+                <label for="">Top Surface Area :</label><p class="ConicalTopSA"></p>
                 <p class="ConicalTopParam"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="ConicalBottomSA"></p>
+                <label for="">Bottom Surface Area :</label><p class="ConicalBottomSA"></p>
                 <p class="ConicalBottom_param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="ConicalLateralSA"></p>
+                <label for="">Lateral Surface Area :</label><p class="ConicalLateralSA"></p>
                 <p class="Conical_Lateral_param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="ConicalTotalSA"></p>
+                <label for="">Total Surface Area :</label><p class="ConicalTotalSA"></p>
                 <p class="ConicalTotal_param"><sup></sup></p>
             </div>
 
@@ -461,7 +462,7 @@
         </select> 
 
         <div class="answer">
-            <p class="Ellipsoid"></p>
+            <label for="">Surface Area :</label><p class="Ellipsoid"></p>
             <p class="elli_param"><sup></sup></p>
         </div>
 
@@ -498,17 +499,17 @@
             </select> 
 
             <div class="answer">
-                <p class="BasePyramidSA"></p>
+                <label for="">Base Surface Area :</label><p class="BasePyramidSA"></p>
                 <p class="Base-param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="LateralPyramidSA"></p>
+                <label for="">Lateral Surface Area :</label><p class="LateralPyramidSA"></p>
                 <p class="Lateral-param"><sup></sup></p>
             </div>
 
             <div class="answer">
-                <p class="TotalPyramidSA"></p>
+                <label for="">Total Surface Area :</label><p class="TotalPyramidSA"></p>
                 <p class="Total-param"><sup></sup></p>
             </div>
             
@@ -541,7 +542,7 @@
             selectElement = document.querySelector('#measure');
             output = selectElement.value;
             
-            surfaceArea = `${4 * 3.14 * radius * radius}`;
+            surfaceArea = `${4 * Math.PI * radius * radius}`;
             
             document.querySelector('.output').textContent = surfaceArea;
             
@@ -578,7 +579,7 @@
         param2 = selectElement2.value;
 
             // base surface area
-            BaseSurfaceArea = `${3.14 * Baseradius * Baseradius}`;
+            BaseSurfaceArea = `${Math.PI * Baseradius * Baseradius}`;
 
             document.querySelector('.BSA').textContent = BaseSurfaceArea;
 
@@ -586,7 +587,7 @@
 
             // Lateral surface area
 
-            LateralSurfaceArea = `${3.14 * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
+            LateralSurfaceArea = `${Math.PI * Baseradius * Math.sqrt(Baseradius * Baseradius +  Height * Height)}`;
 
             document.querySelector('.LSA').textContent = LateralSurfaceArea;
 
@@ -596,7 +597,6 @@
 
 
         }
-
 
 
         function cubeSurface() {
@@ -654,14 +654,14 @@
 
             // Total surface area
 
-            TotalSurfaceArea = `${ 3.14 * Baseradius * Baseradius}`;
+            TotalSurfaceArea = `${ Math.PI * Baseradius * Baseradius}`;
 
             document.querySelector('.TopSA').textContent = TotalSurfaceArea;
             
             document.querySelector('.Top-param').textContent = param1;
 
             // base surface area
-            BottomSurfaceArea = `${ 3.14 * Baseradius * Baseradius}`;
+            BottomSurfaceArea = `${ Math.PI * Baseradius * Baseradius}`;
 
             document.querySelector('.BottomSA').textContent = BottomSurfaceArea;
             
@@ -669,7 +669,7 @@
 
             // Lateral surface area
 
-            LateralSurfaceArea = `${2 * 3.14 * Baseradius * Height}`;
+            LateralSurfaceArea = `${2 * Math.PI * Baseradius * Height}`;
 
             document.querySelector('.LateralSA').textContent = LateralSurfaceArea;
 
@@ -688,24 +688,24 @@
         }
 
 
-        // function RecTankSurface() {
-        //     selectElement = document.querySelector('#tank-measure1');
+        function RecTankSurface() {
+            selectElement = document.querySelector('#tank-measure1');
 
-        //     param_type = selectElement.value;
+            param_type = selectElement.value;
 
-        //     Length = document.getElementById('tank-length').value;
+            Length = document.getElementById('tank-length').value;
 
-        //     width = document.getElementById('tank-width').value;
+            width = document.getElementById('tank-width').value;
 
-        //     Height = document.getElementById('tank-height').value;
+            Height = document.getElementById('tank-height').value;
 
-        //     TankSurfaceArea = `${2 *(Length * width + Length * Height + width * Height)}`;
+            TankSurfaceArea = `${2 *(Length * width + Length * Height + width * Height)}`;
 
-        //     document.querySelector('.TankSA').textContent = TankSurfaceArea;
+            document.querySelector('.TankSA').textContent = TankSurfaceArea;
 
-        //     document.querySelector('.Tank-param').textContent = param_type;
+            document.querySelector('.Tank-param').textContent = param_type;
 
-        // }
+        }
 
 
         function CapsuleSurfaceArea() {
@@ -734,19 +734,19 @@
 
 
                 // Total surface area
-                TopSurfaceArea = `${ 2 * 3.14 * Baseradius * Baseradius}`;
+                TopSurfaceArea = `${ 2 * Math.PI * Baseradius * Baseradius}`;
                 document.querySelector('.CapsuleTopSA').textContent = TopSurfaceArea;
                 document.querySelector('.CapsuleTopParam').textContent = param1;
 
                 //base surface area
-                CapsuleBottomSA = `${ 2 * 3.14 * Baseradius * Baseradius}`;
+                CapsuleBottomSA = `${ 2 * Math.PI * Baseradius * Baseradius}`;
 
                 document.querySelector('.CapsuleBottomSA').textContent = CapsuleBottomSA;
 
                 document.querySelector('.CapsuleBottom-param').textContent = param1;
 
                 // Lateral surface area
-                CapsuleLateralSA = `${2 * 3.14 * Baseradius * Height}`;
+                CapsuleLateralSA = `${2 * Math.PI * Baseradius * Height}`;
 
                 document.querySelector('.CapsuleLateralSA').textContent = CapsuleLateralSA;
 
@@ -791,17 +791,17 @@
 
             // Total surface area
 
-            TotalSurfaceArea = `${3.14 * Topradius * Topradius}`;
+            TotalSurfaceArea = `${Math.PI * Topradius * Topradius}`;
             document.querySelector('.ConicalTopSA').textContent = TotalSurfaceArea;
             document.querySelector('.ConicalTopParam').textContent = param1;
 
             // base surface area
-            BottomSurfaceArea = `${ 3.14 * bottomRadius * bottomRadius}`;
+            BottomSurfaceArea = `${ Math.PI * bottomRadius * bottomRadius}`;
             document.querySelector('.ConicalBottomSA').textContent = BottomSurfaceArea;
             document.querySelector('.ConicalBottom_param').textContent = param2;
 
             // Lateral surface area
-            LateralSurfaceArea = `${3.14 * (Number(bottomRadius) + Number(Topradius)) * 
+            LateralSurfaceArea = `${Math.PI * (Number(bottomRadius) + Number(Topradius)) * 
             Math.sqrt((Number(bottomRadius) - Number(Topradius)) **2 + Number(Height) **2)}`;
 
             document.querySelector('.ConicalLateralSA').textContent = LateralSurfaceArea;
@@ -838,7 +838,7 @@
                 selectElement = document.querySelector('#axis_measure1');
                 output = selectElement.value;
 
-                Ellipsoid  = (4 * 3.14) * Math.pow(Number((Axis1 * Axis2) **1.6) + Number((Axis1 * Axis3) **1.6) + Number((Axis2 * Axis3) **1.6)/3, 1/1.6);
+                Ellipsoid  = 4 * Math.PI * Math.pow((Math.pow(Axis1*Axis2, 1.6) + Math.pow(Axis1*Axis3, 1.6) + Math.pow(Axis2*Axis3, 1.6)) / 3, 1/1.6);
 
                 document.querySelector('.Ellipsoid').textContent = Ellipsoid;
 
